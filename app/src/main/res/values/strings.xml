@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SOSsalao</string>
+    <string name="forget_password">Esqueceu as senha?<b>Clique aqui para trocar</b></string>
 </resources>
