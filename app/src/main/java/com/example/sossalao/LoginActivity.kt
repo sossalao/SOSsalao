@@ -16,7 +16,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun onClickLogin(){
-        val intent = Intent(this, activity_home::class.java)
+        val intent = Intent(this, HomeActivity::class.java)
 
         if (loginAuthenticator()){
             Toast.makeText(this, "Bem vindo", Toast.LENGTH_SHORT).show()
@@ -26,11 +26,14 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun loginAuthenticator():Boolean{
+    private fun loginAuthenticator():Boolean {
         val login = username.text.toString()
         val password = password.text.toString()
 
-        return login == "aluno" && password == "impacta"
+        if (login == "aluno" && password == "impacta")
+            return true
+        return false
+
     }
 
 }
