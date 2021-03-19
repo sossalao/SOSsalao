@@ -6,23 +6,33 @@
     android:layout_height="match_parent"
     android:background="@color/blue"
     tools:context=".HomeActivity">
+
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottom_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        app:fabAlignmentMode="center"
         app:backgroundTint="@color/purple_500"
+        app:fabAlignmentMode="center"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        />
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/action_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:backgroundTint="@color/gray"
         android:src="@drawable/ic_outline_search_24"
-        app:layout_anchor="@+id/bottom_home"
+        app:backgroundTint="@color/gray"
+        app:layout_anchor="@id/bottom_home" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+        app:menu="@menu/menu"
+
         />
 
 
