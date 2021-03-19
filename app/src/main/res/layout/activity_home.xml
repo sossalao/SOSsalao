@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/blue"
     tools:context=".HomeActivity">
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottom_home"
@@ -12,11 +12,12 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         app:fabAlignmentMode="center"
-        app:backgroundTint="@color/colorPrimaryDark"
+        app:backgroundTint="@color/purple_500"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         />
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/action_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:backgroundTint="@color/gray"
