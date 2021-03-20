@@ -7,33 +7,39 @@
     android:background="@color/blue"
     tools:context=".HomeActivity">
 
+    <!-- Nested ScrollView-->
+    <!-- Bottom appbar-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp"></androidx.core.widget.NestedScrollView>
+
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottom_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        app:backgroundTint="@color/purple_500"
+        app:backgroundTint="@android:color/holo_purple"
         app:fabAlignmentMode="center"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
-
+    <!-- Bottom Search-->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/action_search"
+        android:id="@+id/action_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_outline_search_24"
-        app:backgroundTint="@color/gray"
+        app:srcCompat="@drawable/ic_baseline_add_24"
+        android:outlineProvider="@color/purple_500"
+        app:backgroundTint="#FFC400"
+        app:tint="@color/purple_700"
+        app:pressedTranslationZ="10dp"
+        app:maxImageSize="35dp"
+        app:fabCustomSize="70dp"
         app:layout_anchor="@id/bottom_home" />
+    <!-- Bottom Menu-->
 
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
-        app:menu="@menu/menu"
 
-        />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

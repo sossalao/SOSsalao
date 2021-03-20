@@ -11,15 +11,16 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        action_search.setOnClickListener{
-            Toast.makeText(this@HomeActivity, "Deseja pesquisar algo?", Toast.LENGTH_SHORT).show()
+        action_add.setOnClickListener{
+            Toast.makeText(this@HomeActivity, "Deseja add algo?", Toast.LENGTH_SHORT).show()
         }
 
-        bottomAppBar.replaceMenu(R.menu.menu)
+        bottom_home.replaceMenu(R.menu.menu)
 
-        bottomAppBar.setOnMenuItemClickListener { menuItem ->
+        bottom_home.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
-                R.id.action_add -> Toast.makeText(this@HomeActivity,"Deseja adicionar algo?", Toast.LENGTH_SHORT).show()
+                //Buscar: filtrar elementos de uma lista na tela (veja código no GitHub de aula para ver a implementação). Por enquanto faça apenas a simulação de busca, mostrando o texto inserido no Toast quando estiver digitando e quando finalizar a busca
+                R.id.action_search -> Toast.makeText(this@HomeActivity,"Deseja pesquisar algo?", Toast.LENGTH_SHORT).show()
                 R.id.action_config -> Toast.makeText(this@HomeActivity,"Deseja configurar algo?", Toast.LENGTH_SHORT).show()
                 R.id.action_refresh -> Toast.makeText(this@HomeActivity,"Deseja atualizar algo?", Toast.LENGTH_SHORT).show()
                 R.id.action_logout -> Toast.makeText(this@HomeActivity,"Deseja deslogar?", Toast.LENGTH_SHORT).show()
