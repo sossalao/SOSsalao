@@ -9,6 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SOSsalao">
+        <activity
+            android:name=".ChangePassActivity"
+            android:theme="@style/SOSsalao.Login"/>
+        <activity
+            android:name=".RecoveryCodeActivity"
+            android:theme="@style/SOSsalao.Login"/>
+        <activity
+            android:name=".ChangePassReqActivity"
+            android:theme="@style/SOSsalao.Login"/>
         <activity android:name=".HomeActivity" />
         <activity
             android:name=".LoginActivity"
