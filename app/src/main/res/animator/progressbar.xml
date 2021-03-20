@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progressbar_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</set>

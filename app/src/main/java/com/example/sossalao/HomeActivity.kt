@@ -1,5 +1,6 @@
 package com.example.sossalao
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -19,14 +20,15 @@ class HomeActivity : AppCompatActivity() {
 
         bottom_home.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
-                //Buscar: filtrar elementos de uma lista na tela (veja código no GitHub de aula para ver a implementação). Por enquanto faça apenas a simulação de busca, mostrando o texto inserido no Toast quando estiver digitando e quando finalizar a busca
                 R.id.action_search -> Toast.makeText(this@HomeActivity,"Deseja pesquisar algo?", Toast.LENGTH_SHORT).show()
-                R.id.action_config -> Toast.makeText(this@HomeActivity,"Deseja configurar algo?", Toast.LENGTH_SHORT).show()
-                R.id.action_refresh -> Toast.makeText(this@HomeActivity,"Deseja atualizar algo?", Toast.LENGTH_SHORT).show()
-                R.id.action_logout -> Toast.makeText(this@HomeActivity,"Deseja deslogar?", Toast.LENGTH_SHORT).show()
+                R.id.action_config -> startActivity(Intent(this, SettingsActivity::class.java))
+                R.id.action_refresh -> loading()
+                R.id.action_logout -> startActivity(Intent(this, LoginActivity::class.java))
             };   true
 
         }
-
+    }
+    private fun loading() {
+        R.animator.progressbar.apply {  }
     }
 }
