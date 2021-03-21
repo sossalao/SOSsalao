@@ -3,8 +3,14 @@ package com.example.sossalao
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.SystemClock
+import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 
 class HomeActivity : AppCompatActivity() {
@@ -13,7 +19,7 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         action_add.setOnClickListener{
-            Toast.makeText(this@HomeActivity, "Deseja add algo?", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, RegisterActivity::class.java))
         }
 
         bottom_home.replaceMenu(R.menu.menu)
@@ -27,8 +33,14 @@ class HomeActivity : AppCompatActivity() {
             };   true
 
         }
+
     }
-    private fun loading() {
-        R.animator.progressbar.apply {  }
+
+    private fun loading(){
+        GlobalScope.launch(context = Dispatchers.Main) {
+            progressBar.visibility = View.VISIBLE
+            delay(10000)
+            progressBar.visibility = View.GONE
+        }
     }
 }
