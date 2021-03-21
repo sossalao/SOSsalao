@@ -13,7 +13,7 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         action_add.setOnClickListener{
-            Toast.makeText(this@HomeActivity, "Deseja add algo?", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, RegisterActivity::class.java))
         }
 
         bottom_home.replaceMenu(R.menu.menu)
@@ -22,13 +22,10 @@ class HomeActivity : AppCompatActivity() {
             when (menuItem.itemId) {
                 R.id.action_search -> Toast.makeText(this@HomeActivity,"Deseja pesquisar algo?", Toast.LENGTH_SHORT).show()
                 R.id.action_config -> startActivity(Intent(this, SettingsActivity::class.java))
-                R.id.action_refresh -> loading()
+                R.id.action_refresh -> R.animator.progressbar.apply{ 10 }
                 R.id.action_logout -> startActivity(Intent(this, LoginActivity::class.java))
             };   true
 
         }
-    }
-    private fun loading() {
-        R.animator.progressbar.apply {  }
     }
 }
